@@ -1,0 +1,45 @@
+﻿@model ProductUpdateViewModel
+<html>
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <section class="container bg-success" style="margin:10px; margin-left:60px; margin-top:60px; border-radius:10px; width:600px; display:inline-block;">
+
+        <form asp-controller="Product" asp-action="Update" method="post">
+            <section>
+                <input style="margin:10px; width:40px; background-color:transparent" asp-for="Product.Id" hidden />
+            </section>
+            <section>
+                <label style="font-size:20px" asp-for="Product.Name"></label>
+                <input style="margin:10px;" asp-for="Product.Name" />
+                <span style="color:red;" asp-validation-for="Product.Name"></span>
+            </section>
+            <section>
+                <label style="font-size:20px" asp-for="Product.Category"></label>
+                <input style="margin:10px;" asp-for="Product.Category" />
+                <span style="color:red;" asp-validation-for="Product.Category"></span>
+            </section>
+            <section>
+                <label style="font-size:20px" asp-for="Product.Price"></label>
+                <input style="margin:10px;" asp-for="Product.Price" />
+                <span style="color:red;" asp-validation-for="Product.Price"></span>
+            </section>
+            <section>
+                <label style="font-size:20px" asp-for="Product.Discount"></label>
+                <input style="margin:10px;" asp-for="Product.Discount" />
+                <span style="color:red;" asp-validation-for="Product.Discount"></span>
+            </section>
+            <section>
+                <label style="font-size:20px" asp-for="Product.ImagePath"></label>
+                <input style="margin:10px;" asp-for="Product.ImagePath" />
+                <span style="color:red;" asp-validation-for="Product.ImagePath"></span>
+            </section>
+            <section>
+                <button class="btn btn-primary" type="submit">Update</button>
+            </section>
+        </form>
+    </section>
+</body>
+</html>
